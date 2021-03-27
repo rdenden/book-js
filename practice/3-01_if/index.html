@@ -18,18 +18,23 @@
 <main>
 <div class="container">
 <section>
-  
+
 </section>
 </div><!-- /.container -->
 </main>
 <footer>
-<script>
-  'user strict';
-  window.alert('アプリ連携が完了しました。');
-</script>
 <div class="container">
 <p>JavaScript Samples</p>
 </div><!-- /.container -->
 </footer>
+<script>
+  'user strict';
+
+if (window.confirm('ゲームスタート！準備はいい？')) {
+  console.log('ゲームを開始します。');
+} else {
+  console.log('ゲームを終了します。');
+}
+</script>
 </body>
 </html>
