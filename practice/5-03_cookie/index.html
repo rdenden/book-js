@@ -32,5 +32,19 @@
   <p>当サイトではユーザーエクスペリエンス向上のためクッキーを使用しています。また、匿名でアクセス状況のデータを収集いています。詳しい情報は当サイトのプライバシーポリシーをご覧ください。</p>
   <button id="agreebtn">承認する<button>
 </div>
+<script src="../../_common/script/js.cookie.js"></script>
+<script>
+  'user strict'
+
+  const agree = Cookie.get('cookie-agree');
+  if(agree === 'yes'){
+    console.log('クッキーを確認しました');
+  } else {
+    console.log('クッキーを確認できません');
+    document.getElementById('agreebtn').onclick = function(){
+      Cookies.set('cookie-agree', 'yes', {expires: 7});
+    };
+  }
+</script>
 </body>
 </html>
