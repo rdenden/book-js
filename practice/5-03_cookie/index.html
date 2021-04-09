@@ -36,7 +36,7 @@
 <script>
   'user strict'
 
-  const agree = Cookie.get('cookie-agree');
+  const agree = Cookies.get('cookie-agree');
   if(agree === 'yes'){
     console.log('クッキーを確認しました');
   } else {
